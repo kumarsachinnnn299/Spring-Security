@@ -24,7 +24,7 @@ public class JwtUtils {
     @Value("${spring.app.jwtSecret}")
     private String jwtSecret;//will be used for signing the tokens
     @Value("${spring.app.jwtExpirationMs}")
-    private String jwtExpirationMs;
+    private long jwtExpirationMs;
 
     public String getJwtFromHeader(HttpServletRequest request)
     {
